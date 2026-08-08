@@ -1,14 +1,15 @@
 html,
 body,
 #root {
-  height: 100%;
+  height: 100dvh;
   min-height: 100dvh;
   min-height: 100svh;
   min-height: 100vh;
   background: #000;
   margin: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #root {
@@ -49,20 +50,32 @@ body {
   box-sizing: border-box;
 }
 
-.centered h1 {
-  margin: 0;
-  font-weight: 800;
-  font-size: clamp(24px, 6vw, 96px);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  line-height: 1.02;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
+.centered {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .centered h1 span {
   display: block;
+}
+
+.centered h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(28px, 8vw, 96px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
 .centered h1 .line1 {
@@ -71,8 +84,9 @@ body {
 }
 
 .centered h1 .line2 {
-  font-size: 0.6em;
-  margin-top: 0.12em;
+  font-size: clamp(14px, 3.2vw, 36px);
+  margin-top: 0.35em;
+  font-weight: 600;
 }
 
 .version {

@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# bump package version (integer) and stage it so commit includes it
+node "$(dirname "$0")/../scripts/bump-version.js"
