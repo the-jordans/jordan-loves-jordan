@@ -74,3 +74,17 @@ body {
   font-size: 0.6em;
   margin-top: 0.12em;
 }
+
+.version {
+  position: fixed;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  font-size: clamp(12px, 1.6vw, 14px);
+  color: rgba(255, 255, 255, 0.72);
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
