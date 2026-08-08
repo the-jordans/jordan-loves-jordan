@@ -2,10 +2,13 @@ html,
 body,
 #root {
   height: 100%;
+  min-height: 100dvh;
+  min-height: 100svh;
   min-height: 100vh;
   background: #000;
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 #root {
@@ -29,7 +32,15 @@ body {
 }
 
 .centered {
-  min-height: calc(100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+  min-height: calc(
+    100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+  );
+  min-height: calc(
+    100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+  );
+  min-height: calc(
+    100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
