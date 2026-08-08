@@ -3,7 +3,11 @@ body,
 #root {
   height: calc(var(--vh, 1vh) * 100);
   min-height: calc(var(--vh, 1vh) * 100);
-  background: #000;
+  background-color: #000;
+  background-image: url('./assets/deerwoode.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   margin: 0;
   width: 100%;
   overflow: hidden;
@@ -68,6 +72,15 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-shadow:
+    -1px -1px 0 #000,
+    0 -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 0 0 #000,
+    1px 0 0 #000,
+    -1px 1px 0 #000,
+    0 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .centered h1 .line1 {
